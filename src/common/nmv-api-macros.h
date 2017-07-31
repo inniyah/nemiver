@@ -52,5 +52,12 @@
 #  define NEMIVER_PURE_IFACE
 #  define NEMIVER_API
 # endif //HAS_GCC_VISIBILITY_SUPPORT
+
+# if __cplusplus >= 201103L
+#  define DTOR_NOEXCEPT noexcept(false)
+# else
+#  define DTOR_NOEXCEPT
+# endif //__cplusplus >= 201103L
+
 #endif
 

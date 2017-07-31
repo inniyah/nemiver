@@ -116,7 +116,7 @@ struct TransactionAutoHelper
         return m_trans;
     }
 
-    ~TransactionAutoHelper ()
+    ~TransactionAutoHelper () DTOR_NOEXCEPT
     {
         if (m_ignore) {
             return;

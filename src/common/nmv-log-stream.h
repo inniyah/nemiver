@@ -151,7 +151,7 @@ public:
                const string &a_default_domain=NMV_GENERAL_DOMAIN);
 
     /// \brief destructor of the log stream class
-    virtual ~LogStream ();
+    virtual ~LogStream () DTOR_NOEXCEPT;
 
     /// \brief enable or disable logging for a domain
     /// \param a_domain the domain to enable logging for

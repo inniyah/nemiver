@@ -54,7 +54,7 @@ public:
 
     Object& operator= (Object const&);
 
-    virtual ~Object ();
+    virtual ~Object () DTOR_NOEXCEPT;
 
     void ref ();
 

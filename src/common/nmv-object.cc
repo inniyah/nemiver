@@ -68,7 +68,7 @@ Object::operator= (Object const &a_object)
     return *this;
 }
 
-Object::~Object ()
+Object::~Object () DTOR_NOEXCEPT
 {
 }
 

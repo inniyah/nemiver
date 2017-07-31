@@ -373,7 +373,7 @@ LogStream::LogStream (enum LogLevel a_level,
     }
 }
 
-LogStream::~LogStream ()
+LogStream::~LogStream () DTOR_NOEXCEPT
 {
     LOG_D ("delete", "destructor-domain");
     ABORT_IF_FAIL2 (m_priv, "double free in LogStream::~LogStream");
