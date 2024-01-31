@@ -231,8 +231,9 @@ AC_ARG_ENABLE(gsettings,
               AS_HELP_STRING([--enable-gsettings=yes|no],
                              [use gsettings instead of gconf (default is auto)]),
               ENABLE_GSETTINGS=$enableval,
+	      [
               AC_CHECK_PROG([HAS_DCONF], [dconf], [yes], [no])
-              [PKG_CHECK_EXISTS([giomm-2.4 >= $LIBGIOMM_WITH_GSETTINGS_VERSION gsettings-desktop-schemas >= $GSETTINGS_DESKTOP_SCHEMAS], [HAS_GSETTINGS=yes], [HAS_GSETTINGS=no])])
+              PKG_CHECK_EXISTS([giomm-2.4 >= $LIBGIOMM_WITH_GSETTINGS_VERSION gsettings-desktop-schemas >= $GSETTINGS_DESKTOP_SCHEMAS], [HAS_GSETTINGS=yes], [HAS_GSETTINGS=no])])
 if test x$ENABLE_GSETTINGS = xyes || (test x$ENABLE_GSETTINGS = xauto \
       && test x$HAS_GSETTINGS = xyes \
       && test x$HAS_DCONF = xyes); then
